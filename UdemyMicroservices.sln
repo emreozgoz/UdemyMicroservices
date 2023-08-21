@@ -7,12 +7,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{60
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{F522FCBF-D63A-45C8-A19D-BB062D9D073E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeCourse.Services.Catalog", "Services\Catalog\FreeCourse.Services.Catalog\FreeCourse.Services.Catalog.csproj", "{55FC144A-10B6-4D74-BCD6-86AD12035CC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeCourse.Services.Catalog", "Services\Catalog\FreeCourse.Services.Catalog\FreeCourse.Services.Catalog.csproj", "{55FC144A-10B6-4D74-BCD6-86AD12035CC7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DBFFE362-371B-4550-9368-EE11BE963179}"
 	ProjectSection(SolutionItems) = preProject
 		Ports.txt = Ports.txt
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{DBB9DFB2-7B90-4BD6-B456-4049FD475F93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeCourse.Shared", "FreeCourse.Shared\FreeCourse.Shared.csproj", "{B433BC0D-CA61-49E7-ABF2-8B4F311414D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +28,10 @@ Global
 		{55FC144A-10B6-4D74-BCD6-86AD12035CC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55FC144A-10B6-4D74-BCD6-86AD12035CC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55FC144A-10B6-4D74-BCD6-86AD12035CC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B433BC0D-CA61-49E7-ABF2-8B4F311414D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B433BC0D-CA61-49E7-ABF2-8B4F311414D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B433BC0D-CA61-49E7-ABF2-8B4F311414D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B433BC0D-CA61-49E7-ABF2-8B4F311414D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -31,6 +39,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{F522FCBF-D63A-45C8-A19D-BB062D9D073E} = {60A3B12B-60A1-43B1-A1E0-1F9619D57120}
 		{55FC144A-10B6-4D74-BCD6-86AD12035CC7} = {F522FCBF-D63A-45C8-A19D-BB062D9D073E}
+		{B433BC0D-CA61-49E7-ABF2-8B4F311414D6} = {DBB9DFB2-7B90-4BD6-B456-4049FD475F93}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E06D13FF-65FE-4012-9F06-4406C364DF7A}
