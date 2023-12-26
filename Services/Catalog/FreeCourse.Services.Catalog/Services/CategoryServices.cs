@@ -22,7 +22,7 @@ namespace FreeCourse.Services.Catalog.Services
 
         public async Task<Response<List<CategoryDto>>> GetAllAsync()
         {
-            var categories = _categoryCollection.Find(x => true).ToListAsync();
+            var categories = await _categoryCollection.Find(x => true).ToListAsync();
             return Response<List<CategoryDto>>.Success(_mapper.Map<List<CategoryDto>>(categories), 200);
         }
 
@@ -34,10 +34,9 @@ namespace FreeCourse.Services.Catalog.Services
 
         public async Task<Response<CategoryDto>> GetByIdAsync(string id)
         {
-            var category = _categoryCollection.Find(x => x.Id == id);
+            var category =  await _categoryCollection.FindAsync(x => x.Id == id);
             if (category == null)
                 return Response<CategoryDto>.Fail("Category not found", 404);
-
             return Response<CategoryDto>.Success(_mapper.Map<CategoryDto>(category), 200);
         }
     }
