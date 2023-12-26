@@ -59,10 +59,10 @@ namespace FreeCourse.Services.Catalog.Services
         }
         public async Task<Response<CourseDto>> GetById(string id)
         {
-            var course = await _courseCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
+            var course = await _courseCollection.Find<Course>(x => x.Id == id).FirstOrDefaultAsync();
             if (course == null)
                 return Response<CourseDto>.Fail("Course is not found", 404);
-            course.Category = await _categoryCollection.Find<Category>(x => x.Id == course.Category.Id).FirstAsync();
+            course.Category = await _categoryCollection.Find<Category>(x => x.Id == course.CategoryId).FirstAsync();
             return Response<CourseDto>.Success(_mapper.Map<CourseDto>(course), 200);
         }
 
