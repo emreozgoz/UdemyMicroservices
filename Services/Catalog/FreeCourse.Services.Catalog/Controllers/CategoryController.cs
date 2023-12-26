@@ -1,4 +1,5 @@
-﻿using FreeCourse.Services.Catalog.Models;
+﻿using FreeCourse.Services.Catalog.Dtos;
+using FreeCourse.Services.Catalog.Models;
 using FreeCourse.Services.Catalog.Services;
 using FreeCourse.Shared.ControllerBases;
 using Microsoft.AspNetCore.Http;
@@ -23,9 +24,9 @@ namespace FreeCourse.Services.Catalog.Controllers
             return CreateActionResultBase(response);
         }
         [HttpPost]
-        public async Task<IActionResult> Create(Category category)
+        public async Task<IActionResult> Create(CategoryDto categoryDto)
         {
-            var response = await _categoryService.CreateAsync(category);
+            var response = await _categoryService.CreateAsync(categoryDto);
             return CreateActionResultBase(response);
         }
         [HttpGet("{id}")]
